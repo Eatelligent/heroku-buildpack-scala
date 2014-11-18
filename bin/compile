@@ -140,10 +140,6 @@ if is_sbt_native_packager $BUILD_DIR || is_play $BUILD_DIR; then
     echo "-----> Dropping sbt boot dir from the slug"
     rm -rf $SBT_USER_HOME/boot
   fi
-  if [ -d $BUILD_DIR/project/boot ] ; then
-    echo "-----> Dropping project boot dir from the slug"
-    rm -rf $BUILD_DIR/project/boot
-  fi
   if [ -d $BUILD_DIR/target ] ; then
     echo "-----> Dropping compilation artifacts from the slug"
     rm -rf $BUILD_DIR/target/scala-*
